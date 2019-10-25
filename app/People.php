@@ -23,13 +23,15 @@ class People extends Model
         'telephone',
         'email',
         'obs',
+        'plate',
+        'Veic_color',
+        'Veic_model',
+        'Veic_description',
         'profile',
-        'crm',
         'office',
         'sector',
         'state',
-        'city',
-        'specialty_id'
+        'city'
     ];
 
     /*public function telephone(){

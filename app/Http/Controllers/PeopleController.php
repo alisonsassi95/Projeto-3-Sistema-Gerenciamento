@@ -32,23 +32,6 @@ class PeopleController extends Controller
         return view('people.index', ['peoples' => $peoples]);
     }
 
-    public function indexMedicos()
-    {
-        $peoples = $this->peopleModel->where('profile','=','3')->paginate(20);
-        return view('people.index', ['peoples' => $peoples]);
-    }
-    
-    public function indexPacientes()
-    {
-        $peoples = $this->peopleModel->where('profile','=','4')->paginate(20);
-        return view('people.index', ['peoples' => $peoples]);
-    }
-
-    public function indexFuncionarios()
-    {
-        $peoples = $this->peopleModel->where('profile','=','2')->paginate(20);
-        return view('people.index', ['peoples' => $peoples]);
-    }
     public function menu()
     {
         return view('people.menu');
@@ -71,13 +54,18 @@ class PeopleController extends Controller
     {
         $insert = 0;
        try{
+           
             $insert = People::create($request->all());
-
+            //dd($insert);
        }catch(Exception $e){
-           echo('Erro!');
+        dd('entrou no excepition');
+        return redirect()
+                ->route('people.add')
+                ->with('error', 'Dados cadastrais Incompletos!');
     }finally{
         $tipopessoa = $request->get('profile');
         if ($insert){    // Verifica se inseriu com sucesso
+            dd('entrou no inserir pessoa');
             if($tipopessoa <= 3){
                 return redirect()
                         ->route('people.index')
@@ -86,7 +74,10 @@ class PeopleController extends Controller
             return redirect()
                         ->route('people.index')
                         ->with('error', 'Tipo de Pessoa Inválido!');
-        }
+        }else
+        return redirect()
+                    ->back()
+                    ->with('error', 'Dados cadastrais Inválido!');
    return redirect()
                 ->route('people.add')
                 ->with('error', 'Dados cadastrais Incompletos!');

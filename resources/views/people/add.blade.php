@@ -155,9 +155,58 @@
                         </span>
                         @endif
                         </div>
+
+                        <div class="form-group col-md-4 {{$errors->has('plate') ? 'has-error' : '' }}">
+                            <label for="plate">Placa(Adicionar mascara)</label>
+                            <input type="text" name="plate" id = "plate" class="form-control" placeholder="Placa do Veícuo">
+                        @if($errors->has('plate'))
+                        <span class="help-block">
+                            <strong>{{$errors->first('plate')}}</strong>
+                        </span>
+                        @endif
+                        </div>
+                        
+                        <div class="form-group col-md-4 {{$errors->has('Veic_color') ? 'has-error' : '' }}">
+                            <label for="Veic_color">Cor do veículo</label>
+                            <input type="text" name="Veic_color" id = "Veic_color" class="form-control" placeholder="Modelo do Veícuo">
+                        @if($errors->has('Veic_color'))
+                        <span class="help-block">
+                            <strong>{{$errors->first('Veic_color')}}</strong>
+                        </span>
+                        @endif
+                        </div>
+
+                        <div class="form-group col-md-4 {{$errors->has('Veic_model') ? 'has-error' : '' }}">
+                            <label for="Veic_model">Modelo do veículo</label>
+                            <input type="text" name="Veic_model" id = "Veic_model" class="form-control" placeholder="Cor do Veícuo">
+                        @if($errors->has('Veic_model'))
+                        <span class="help-block">
+                            <strong>{{$errors->first('Veic_model')}}</strong>
+                        </span>
+                        @endif
+                        </div>
+
+                        <div class="form-group col-md-12 {{$errors->has('Veic_description') ? 'has-error' : '' }}">
+                            <label for="Veic_description">Observaçao do veículo</label>
+                            <input type="textarea" name="Veic_description" class="form-control" placeholder="Veic_descriptionervação">
+                            @if($errors->has('Veic_description'))
+                        <span class="help-block">
+                            <strong>{{$errors->first('Veic_description')}}</strong>
+                        </span>
+                        @endif
+                        </div>
+                        <label> Se tiver mais de um veículo?</label>
+                        <!-- 
+                        <input type="button" class="form-control" value="Cadastrar veículo" data-toggle="modal" data-target="#myModalcad">
                         <div class="col-md-12"> 
+                        -->
+                        <br>
                         <button class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Adicionar</button>
                         </div>
+
+                        @if (Session::has('message'))
+                        <div class="alert alert-info">{{ Session::get('message') }}</div>
+                        @endif
                     </form>
             </div>
         </div>
@@ -167,7 +216,7 @@
 
 
  
-<!-- validação dos medicos -->
+<!-- validação -->
 <script type="text/javascript">
     function habilitaBtn () {
         var op = document.getElementById("profile").value;
@@ -189,7 +238,7 @@
         }
     }
 
-    //<!-- validação dos medicos -->
+    //<!-- validação -->
     function addCert() {
     var lista = document.getElementsByName('certificados[]');
     var ultimoLista = lista[lista.length - 1];
@@ -198,4 +247,52 @@
     formPai.insertBefore(novoCert, ultimoLista.nextSibling);
 }
 </script>
-<!-- validação dos medicos -->
+<!-- validação -->
+
+<!-- Inicio Plate Modal -->
+<!--
+<div class="modal fade" id="myModalcad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center" id="myModalLabel">Cadastrar Veículo</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="{ { route('plate.save') }}" method="post">
+                        { { csrf_field() }}
+                        
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Id Pessoa</label>
+                            <input name="peoples" type="text" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                                <label for="recipient-name" class="control-label">Cor do Veículo</label>
+                                <input name="Veic_color" type="text" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                                <label for="recipient-name" class="control-label">Modelo do Veículo</label>
+                                <input name="Veic_model" type="text" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                                <label for="recipient-name" class="control-label">Placa do Veículo</label>
+                                <input name="plate" type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Detalhes:</label>
+                            <textarea name="description" class="form-control"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+-->
+    <!-- Fim Plate Modal -->

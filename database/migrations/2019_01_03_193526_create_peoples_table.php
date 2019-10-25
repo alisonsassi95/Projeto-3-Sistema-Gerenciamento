@@ -27,10 +27,11 @@ class CreatePeoplesTable extends Migration
             $table->String('cep', 15)->nullable();
             $table->String('telephone', 15)->nullable();
             $table->String('email', 80)->unique();
-            $table->String('plate', 45)->nullable();
+            $table->String('obs', 200)->nullable();
+            $table->String('plate', 10);
             $table->String('Veic_color', 45)->nullable();
             $table->String('Veic_model', 45)->nullable();
-            $table->String('obs', 200)->nullable();
+            $table->String('Veic_description', 200)->nullable();
             //Chave estrangeira de Perfil
             $table->integer('profile')->unsigned()->nullable();
             $table->foreign('profile')->references('id')->on('profiles');

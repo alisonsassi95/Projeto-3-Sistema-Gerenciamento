@@ -27,17 +27,17 @@
                         <label for="profile" >Perfil</label>
                         <div required name="profile" class="auto-control" required autofocus>
                         <select class="form-control"  id = "profile" name="profile" onchange="habilitaBtn()">
-                            @if($people->profile == '4')
-                            <option value= "{{ $people->profile }}" >Paciente</option>
-                            <option value="4">Paciente</option>
-                            @endif
                             @if($people->profile == '3')
-                            <option value= "{{ $people->profile }}" >Médico</option>
-                            <option value="3">Médico</option>
+                            <option value= "{{ $people->profile }}" >Cliente</option>
+                            <option value="3">Cliente</option>
                             @endif
                             @if($people->profile == '2')
                             <option value= "{{ $people->profile }}" >Funcionário</option>
                             <option value="2">Funcionário</option>
+                            @endif
+                            @if($people->profile == '1')
+                            <option value= "{{ $people->profile }}" >Administrador</option>
+                            <option value="2">Administrador</option>
                             @endif
 
                             
@@ -59,13 +59,6 @@
                             <input id = "cargo" type="text" name="office"  value="{{$people->office}}" class="form-control" placeholder="Descreva o Cargo do Funcionário">
                             <label for="sector">Setor</label>
                             <input type="text" name="sector" value="{{$people->sector}}" class="form-control" placeholder="Descreva o setor que trabalha">
-                    </div>
-
-                    <!-- se clicar em Medico -->
-                    <div style="display:none" id='medico'  class="form-group {{$errors->has('name') ? 'has-error' : '' }}">
-                        <label for="crm">CRM</label>
-                        <input type="text" id = "crm" value="{{$people->crm}}" name="crm" class="form-control" placeholder="CRM do Médico">
-                        <label for="specialty_id" value="{{$people->specialty_id}}" class="col-md-auto">Especialidade</label>
                     </div>
 
                     <div class="form-group {{$errors->has('name') ? 'has-error' : '' }}">
