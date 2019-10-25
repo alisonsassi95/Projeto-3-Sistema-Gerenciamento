@@ -60,15 +60,19 @@ Em uma pasta do seu computador, digitar no cmd =  git clone https://github.com/a
 OBS: "Irá fazer dowload do projeto"
 
 DENTRO DA PASTA "https://github.com/alisonsassi95/Projeto-3-Sistema-Gerenciamento" digitar = composer install
+
 OBS: "Irá criar as pastas necessárias"
 
-Se não tiver o banco de dados, Criar no mysql
+Se não tiver o banco de dados, Criar no mysql o banco "IDPLATE"
 
 Abrir o arquivo .env.example e substituir as linhas : DB_DATABASE=SUA_BASE_DE_DADOS /// DB_USERNAME=SEU_NOME_DE_USUARIO /// DB_PASSWORD=SUA_SENHA
 
 Rodar o comando = php -r "copy('.env.example', '.env');"
-Rodar o comando = php artisan key:generate
+
+Rodar o comando = php artisan key:generate 
+
 Rodar o comando = php artisan migrate --seed
+
 Rodar o comando = php artisan serve
 
 Para logar-se como ADMIN, acesse a url http://SEU_LOCAL_HOST/home
@@ -77,6 +81,19 @@ Para logar-se como ADMIN, acesse a url http://SEU_LOCAL_HOST/home
 * login: admin 
 
 * senha: admin
+
+
+
+##----------------------------------Criar model com o migrate e controller-------------------------------
+
+Rodar o comando = php artisan make:model -m -c "equipment"  // sempre no singular e em inglês pois no migrate vai estar no plural
+
+php artisan make:controller NameController
+
+php artisan make:model NameModel -m
+
+php artisan make:migration create_nametable_table
+
 
 
 ## License
