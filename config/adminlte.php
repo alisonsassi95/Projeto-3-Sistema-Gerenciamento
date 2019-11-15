@@ -161,7 +161,7 @@ return [
                 [
                     'text' => 'Cadastro de Veículos',
                     'icon' => 'car',
-                    'url'  => '',
+                    'url'  => '/plates',
                 ],
                 [
                     'text' => 'Cadastro de Avisos',

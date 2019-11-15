@@ -28,11 +28,30 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-        $peoples = DB::select('SELECT * FROM peoples');  
+
+       /* $RegisterPlatePeoples = DB::select('
+        SELECT Peoples.name	     AS Nome,  	
+		plates.Veic_model        AS Modelo,
+        plates.plate 	         AS Placa,
+        captureplate.datafoto    AS Data_Registro,
+        captureplate.origemplaca AS TIPO_PLACA
+        FROM plates
+        LEFT JOIN captureplate 	ON captureplate.placa = plates.plate
+        LEFT JOIN peoples 		ON peoples.id = plates.people_id'
+        );  */
+        $PlatePeoples = DB::select('
+        SELECT 
+        Peoples.id       	     AS id,
+        Peoples.name	         AS Nome,  	
+		plates.Veic_model        AS Modelo,
+        plates.plate 	         AS Placa
+        FROM plates
+        LEFT JOIN peoples 		ON peoples.id = plates.people_id
+        ');
+
 
         return view('home',[
-            'peoples' => $peoples,
+            'PlatePeoples' => $PlatePeoples,
         ]);
         
         /*$sql = "SELECT 

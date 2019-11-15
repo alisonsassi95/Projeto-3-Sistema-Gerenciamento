@@ -70,6 +70,15 @@ Route::group( [ 'middleware' => 'auth'], function()
     //Route::get('/ViewExam', ['uses'=>'ExamController@ViewExam', 'as' => 'Exam.ViewExam']);
     //Route::get('/ViewExam/{id}', ['uses'=>'ExamController@visualizar', 'as' => 'Exam.visualizar']);
     
+//Routes Plates
+Route::get('/plates', ['uses'=>'PlateController@index', 'as' => 'plates.index']);
+Route::get('/plates/add', ['uses'=>'PlateController@add', 'as' => 'plates.add']);
+Route::post('/plates/save', ['uses'=>'PlateController@save', 'as' => 'plates.save']);
+Route::get('/plates/edit/{id}', ['uses'=>'PlateController@edit', 'as' => 'plates.edit']);
+Route::put('/plates/update/{id}', ['uses'=>'PlateController@update', 'as' => 'plates.update']);
+Route::get('/plates/delete/{id}', ['uses'=>'PlateController@delete', 'as' => 'plates.delete']);
+
+
 //Usuários
 Route::Post('/people/add/user', ['uses'=>'UserController@save', 'as' => 'user.save']);
 

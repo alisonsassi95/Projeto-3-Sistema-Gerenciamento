@@ -71,5 +71,31 @@
 </section>
 <!-- /.content -->
 
+
+<!-- ------------- Tabela Placas de Pessoas ------------ -->
+<table id="tableDepartament" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+  <thead>
+      <tr>
+        
+          <th>Nome</th>
+          <th>Modelo do Veiculo</th>
+          <th>Placa</th>
+        
+      </tr>
+    </thead>
+<tbody>
+    
+    @foreach($PlatePeoples as $PlatePeoples)
+    <tr>
+      <td>{{ $PlatePeoples->Nome }}</td>
+      <td>{{ $PlatePeoples->Modelo }}</td>
+      <td>{{ $PlatePeoples->Placa }}</td>
+    </tr>
+  @endforeach
+</table>
+
+<!-- FIM de Tabela Placas de Pessoas -->
+
+
 @stop
 
