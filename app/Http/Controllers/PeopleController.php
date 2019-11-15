@@ -56,9 +56,9 @@ class PeopleController extends Controller
        try{
            
             $insert = People::create($request->all());
-            //dd($insert);
+            
        }catch(Exception $e){
-        dd('entrou no excepition');
+        
         return redirect()
                 ->route('people.add')
                 ->with('error', 'Dados cadastrais Incompletos!');

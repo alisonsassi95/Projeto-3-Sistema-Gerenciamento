@@ -23,7 +23,14 @@ Route::get('/', function () {
     //HOME
     Route::view('/home', 'home')->name('home'); 
     Route::get('/home', ['uses'=>'HomeController@index', 'as' => 'home']);  
-
+    
+    //notice
+    Route::get('/notice', ['uses'=>'NoticeController@index', 'as' => 'notice.index']);  
+    Route::get('/notice/add', ['uses'=>'NoticeController@add', 'as' => 'notice.add']);
+    Route::post('/notice/save', ['uses'=>'NoticeController@save', 'as' => 'notice.save']);
+    Route::get('/notice/edit/{id}', ['uses'=>'NoticeController@edit', 'as' => 'notice.edit']);
+    Route::put('/notice/update/{id}', ['uses'=>'NoticeController@update', 'as' => 'notice.update']);
+    Route::get('/notice/delete/{id}', ['uses'=>'NoticeController@delete', 'as' => 'notice.delete']);
 
     //calendar
     Route::get('event/add','ScheduleController@createEvent');

@@ -149,6 +149,18 @@ return [
             'url'  => '/Profile',
         ],
         [
+            'text'    => 'Avisos',
+            'icon'    => 'fa-comment-o',
+            'can'  => 'adm',
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar Avisos',
+                    'icon' => ' fa-bullhorn',
+                    'url'  => '/notice',
+                ],
+            ],        
+        ],
+        [
             'text'    => 'Cadastro',
             'icon'    => 'folder-open',
             'can'  => 'adm',

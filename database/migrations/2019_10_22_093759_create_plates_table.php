@@ -15,7 +15,7 @@ class CreatePlatesTable extends Migration
     {
         Schema::create('plates', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->String('plate', 45)->nullable();
+            $table->String('plate', 45);
             $table->String('Veic_color', 45)->nullable();
             $table->String('Veic_model', 45)->nullable();
             $table->String('Veic_description', 200)->nullable();
