@@ -11,7 +11,8 @@ class Notice extends Model
         'title',
         'description',
         'date_start',
-        'date_end'
+        'date_end',
+        'status'
    ];
 
 }

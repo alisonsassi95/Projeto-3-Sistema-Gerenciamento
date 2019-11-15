@@ -3,7 +3,7 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1> Olá {{Auth::user()->name}}, seja bem vindo!</h1>
+<h1> Olá {{Auth::user()->name}}, seja bem vindo!</h1>
 @stop
 @section('content')
 
@@ -75,27 +75,49 @@
 <!-- ------------- Tabela Placas de Pessoas ------------ -->
 <table id="tableDepartament" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
   <thead>
-      <tr>
-        
-          <th>Nome</th>
-          <th>Modelo do Veiculo</th>
-          <th>Placa</th>
-        
-      </tr>
-    </thead>
-<tbody>
-    
+    <tr>
+
+      <th>Nome</th>
+      <th>Modelo do Veiculo</th>
+      <th>Placa</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
     @foreach($PlatePeoples as $PlatePeoples)
     <tr>
       <td>{{ $PlatePeoples->Nome }}</td>
       <td>{{ $PlatePeoples->Modelo }}</td>
       <td>{{ $PlatePeoples->Placa }}</td>
     </tr>
-  @endforeach
+    @endforeach
+</table>
+
+<!-- FIM de Tabela Placas de Pessoas -->
+<!-- ------------- Tabela Placas de Pessoas ------------ -->
+<table id="tableDepartament" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+  <thead>
+    <tr>
+
+      <th>Titulo</th>
+      <th>Descrição</th>
+      <th>Prioridade</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    @foreach($notices as $notices)
+    <tr>
+      <td>{{ $notices->title }}</td>
+      <td>{{ $notices->description }}</td>
+      <td>{{ $notices->status }}</td>
+
+    </tr>
+    @endforeach
 </table>
 
 <!-- FIM de Tabela Placas de Pessoas -->
 
-
 @stop
-

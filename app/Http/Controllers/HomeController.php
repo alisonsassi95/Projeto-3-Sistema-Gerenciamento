@@ -48,10 +48,16 @@ class HomeController extends Controller
         FROM plates
         LEFT JOIN peoples 		ON peoples.id = plates.people_id
         ');
+        $notices = DB::select('
+        SELECT * FROM notices
+        WHERE notices.date_end >= CURDATE()
+        AND notices.date_start <= CURDATE() 
+        ');
 
 
         return view('home',[
             'PlatePeoples' => $PlatePeoples,
+            'notices' => $notices,
         ]);
         
         /*$sql = "SELECT 

@@ -19,6 +19,7 @@ class CreateNoticesTable extends Migration
             $table->String('description', 200)->nullable();
             $table->Date('date_start')->nullable();
             $table->Date('date_end')->nullable();
+            $table->Integer('status');
             $table->timestamps();
             $table->softDeletes();
         });
