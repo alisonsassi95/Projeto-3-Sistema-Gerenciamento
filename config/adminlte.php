@@ -149,26 +149,34 @@ return [
             'url'  => '/Profile',
         ],
         [
-            'text'    => 'Avisos',
-            'icon'    => 'fa-comment-o',
-            'can'  => 'adm',
-            'submenu' => [
-                [
-                    'text' => 'Cadastrar Avisos',
-                    'icon' => ' fa-bullhorn',
-                    'url'  => '',
-                ],
-            ],        
-        ],
-        [
             'text'    => 'Cadastro',
             'icon'    => 'folder-open',
             'can'  => 'adm',
             'submenu' => [
                 [
-                    'text' => 'Pessoas',
+                    'text' => 'Cadastro de Pessoas',
                     'icon' => 'user-plus',
                     'url'  => '/people',
+                ],
+                [
+                    'text' => 'Cadastro de Veículos',
+                    'icon' => 'car',
+                    'url'  => '',
+                ],
+                [
+                    'text' => 'Cadastro de Avisos',
+                    'icon' => 'bullhorn',
+                    'url'  => '',
+                ],
+                [
+                    'text' => 'Cadastro de Empresas',
+                    'icon' => 'institution',
+                    'url'  => '',
+                ],
+                [
+                    'text' => 'Cadastro de Estacionamento',
+                    'icon' => 'dollar',
+                    'url'  => '',
                 ],
             ],        
         ],

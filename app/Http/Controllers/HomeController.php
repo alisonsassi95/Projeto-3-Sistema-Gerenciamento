@@ -28,7 +28,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        
+        $peoples = DB::select('SELECT * FROM peoples');  
+
+        return view('home',[
+            'peoples' => $peoples,
+        ]);
+        
         /*$sql = "SELECT 
         exams.id,
         paciente.name        as paciente,
