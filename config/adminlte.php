@@ -106,24 +106,24 @@ return [
     | layout. The 'can' is a filter on Laravel's built in Gate functionality.
     |
     */
-    
+
     'menu' => [
         '',
-    //     <div class="painel-do-usuario">
-    //     <div class="pull-left image" >
-    //       <img src="/imagens/avatar/{{Auth::user()->avatar}}" class="img-circle" alt="Imagem do usuário" >
-    //     </div>
-    //     <div class="informacao-esquerda">
-    //     @if (Auth::guest())
-    //       <p>admin@admin.com</p>
-    //       <a href="#" style="color:#c18a8a;"><i class="fa fa-circle text-success"style="color:red;"></i>Desconectado</a>
-    //       @else
-          
-    //       <p>{{$nomeReduzido= str_limit(Auth::user()->name, 20) }}</p>
-    //       <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-    //       @endif
-    //     </div>
-    //   </div>
+        //     <div class="painel-do-usuario">
+        //     <div class="pull-left image" >
+        //       <img src="/imagens/avatar/{{Auth::user()->avatar}}" class="img-circle" alt="Imagem do usuário" >
+        //     </div>
+        //     <div class="informacao-esquerda">
+        //     @if (Auth::guest())
+        //       <p>admin@admin.com</p>
+        //       <a href="#" style="color:#c18a8a;"><i class="fa fa-circle text-success"style="color:red;"></i>Desconectado</a>
+        //       @else
+
+        //       <p>{{$nomeReduzido= str_limit(Auth::user()->name, 20) }}</p>
+        //       <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        //       @endif
+        //     </div>
+        //   </div>
         [
             'text' => 'Inicio',
             'icon' => 'home',
@@ -149,45 +149,26 @@ return [
             'url'  => '/Profile',
         ],
         [
-            'text'    => 'Avisos',
-            'icon'    => 'fa-comment-o',
+            'text' => 'Cadastro de Pessoas',
+            'icon' => 'user-plus',
             'can'  => 'adm',
-            'submenu' => [
-                [
-                    'text' => 'Cadastrar Avisos',
-                    'icon' => ' fa-bullhorn',
-                    'url'  => '/notice',
-                ],
-            ],        
+            'url'  => '/people',
         ],
         [
-            'text'    => 'Cadastro',
-            'icon'    => 'folder-open',
+            'text' => 'Cadastro de Avisos',
+            'icon' => 'bullhorn',
+            'can'  => 'adm',
+            'url'  => '/notice',
+        ],
+
+        [
+            'text'    => 'Relatórios',
+            'icon'    => '',
             'can'  => 'adm',
             'submenu' => [
                 [
-                    'text' => 'Cadastro de Pessoas',
-                    'icon' => 'user-plus',
-                    'url'  => '/people',
-                ],
-                [
-                    'text' => 'Cadastro de Veículos',
-                    'icon' => 'car',
-                    'url'  => '/plates',
-                ],
-                [
-                    'text' => 'Cadastro de Avisos',
-                    'icon' => 'bullhorn',
-                    'url'  => '',
-                ],
-                [
-                    'text' => 'Cadastro de Empresas',
-                    'icon' => 'institution',
-                    'url'  => '',
-                ],
-                [
-                    'text' => 'Cadastro de Estacionamento',
-                    'icon' => 'dollar',
+                    'text' => 'Relatório de Avisos',
+                    'icon' => ' fa-bullhorn',
                     'url'  => '',
                 ],
             ],        
@@ -224,7 +205,7 @@ return [
     | to include the JavaScript file from a CDN via a script tag.
     |
     */
-    
+
 
 
 

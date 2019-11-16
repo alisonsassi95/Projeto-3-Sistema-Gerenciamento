@@ -42,7 +42,8 @@
                                     <a class="btn btn-default" href="{{route('people.edit',$people->id)}}"> <i class="glyphicon glyphicon-edit"></i > Editar</a>
                                     <a class="btn btn-danger" href="javascript:(confirm('Deletar esse registro?') ? window.location.href='{{route('people.delete',$people->id)}}' : false)"><i class="glyphicon glyphicon-trash"></i > Deletar</a>
                                     <a class="btn btn-primary" href="{{route('User.load',$people->id)}}"><i class="glyphicon glyphicon-user"></i > Criar Usuario</a>
-                                        
+                                    <a class="btn btn-primary" href="{{route('plates.load',$people->id)}}"><i class="glyphicon glyphicon-user"></i > Adicionar Veiculo</a>    
+                                
                                 </td>
                               </tr>
                             @endforeach

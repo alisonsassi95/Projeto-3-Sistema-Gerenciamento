@@ -84,7 +84,7 @@ Route::post('/plates/save', ['uses'=>'PlateController@save', 'as' => 'plates.sav
 Route::get('/plates/edit/{id}', ['uses'=>'PlateController@edit', 'as' => 'plates.edit']);
 Route::put('/plates/update/{id}', ['uses'=>'PlateController@update', 'as' => 'plates.update']);
 Route::get('/plates/delete/{id}', ['uses'=>'PlateController@delete', 'as' => 'plates.delete']);
-
+Route::get('/plates/load/{id}', ['uses'=>'PlateController@load', 'as' => 'plates.load']);
 
 //Usuários
 Route::Post('/people/add/user', ['uses'=>'UserController@save', 'as' => 'user.save']);

@@ -11,19 +11,18 @@
     <div role="form">
         <div class="box-body">
             @include('sweet::alert')
-                    <form action="{{ route('plate.save') }}" method="post">
+                    <form action="{{route('plates.save')}}" method="post">
                     {{ csrf_field() }}
                         
-                        <div class="form-group col-md-4 {{$errors->has('people_id') ? 'has-error' : '' }}">
-                            <label for="people_id">Dono do Veiculo</label>
-                            <input type="text" name="people_id" id = "people_id" class="form-control" placeholder="Dono do Veícuo">
-                        @if($errors->has('people_id'))
-                        <span class="help-block">
-                            <strong>{{$errors->first('people_id')}}</strong>
-                        </span>
-                        @endif
+                        <div class="form-group">
+                            <label for="people_id">código Proprietário</label>
+                            <input  readOnly = "true" type="text" name="people_id" value= "{{ $people->id}}" class="form-control" placeholder="Código Proprietário">
                         </div>
 
+                        <div class="form-group">
+                            <label for="name">Nome Proprietário</label>
+                            <input  readOnly = "true" type="text" name="name" value= "{{ $people->name}}" class="form-control" placeholder="Nome Proprietário">
+                        </div>
 
                         <div class="form-group col-md-4 {{$errors->has('plate') ? 'has-error' : '' }}">
                             <label for="plate">Placa(Adicionar mascara)</label>

@@ -26,7 +26,7 @@ class NoticeController extends Controller
         $insert = Notice::create($request->all());
         return redirect()
         ->route('notice.index')
-        ->with('success', 'Pessoa Cadastrada com Sucesso!');
+        ->with('success', 'Cadastrada com Sucesso!');
     }
 
     public function update(Request $request, $id)

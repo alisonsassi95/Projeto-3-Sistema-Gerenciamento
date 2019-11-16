@@ -24,7 +24,9 @@
 
                     <th>Title</th>
                     <th>Description</th>
-                    <th>Date</th>
+                    <th>Data Inicial</th>
+                    <th>Data Final</th>
+                    <th>Status</th>
 
 
                 </tr>
@@ -36,6 +38,8 @@
                     <td>{{ $notice->title }}</td>
                     <td>{{ $notice->description }}</td>
                     <td>{{ $notice->date_start }}</td>
+                    <td>{{ $notice->date_end }}</td>
+                    <td>{{ $notice->status }}</td>
                     <td>
 
 

@@ -16,8 +16,12 @@
 
                 <input type="hidden" name="_method" value="put">
 
+                <div class=" form-group col-md-2" value="{{ old('date_start') }}">
+                    <label for="date_start">Data de Inicio</label>
+                    <input type="date" name="date_start" value="{{$notices->date_start}}" class="form-control" placeholder="Data de Inicio">
+                </div>
 
-                <div class=" form-group col-md-2" value="{{ old('birthdate') }}">
+                <div class=" form-group col-md-2" value="{{ old('date_end') }}">
                     <label for="date_end">Data de término</label>
                     <input type="date" name="date_end" value="{{$notices->date_end}}" class="form-control" placeholder="Data de termino">
                 </div>
