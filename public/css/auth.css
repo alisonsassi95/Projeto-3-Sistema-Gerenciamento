@@ -1,21 +1,95 @@
-body{
-    background-image: url("../img/background.jpeg");
-    height: auto;
-    max-width: 100%;
-    background-color: yellow;
+@media (min-width: 300px) {
+  body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  }
+  
 }
+
+@media (min-width: 992px) {
+  body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1200px) {
+   body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   }
+}
+
 
 .login-box{
     width: 350px;
     height: 500px;
     background-color: white;
     border-radius: 10px;
-    margin: 80px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 .login-box-body{
     margin: 15px;
 }
+
+img{
+    width: 80%;
+    height: 80%;
+    margin-bottom: -30%;
+    margin-top: -40%;
+}
+
+
+p{
+  font-size: 0.7em;
+  color: #072955;
+  letter-spacing: 0.150em;
+  text-align: left;
+  margin-bottom: 0em;
+}
+
 
 .title{
     text-align: center;
@@ -32,26 +106,60 @@ body{
     text-align: center;
 }
 
+.forget{
+  font-size: 10px;
+  color: #949494;
+  text-align: center;
+  margin-top: 0em;
+}
+
+.singin{
+  font-size: 10px;
+  color: #949494;
+  text-align: center;
+  margin-top: 1em;
+}
+
+
+p{
+  font-size: 14px;
+  font-weight: bold;
+}
+
 input{
-    width: 300px;
+  color: white;
+    width: 24em;
     margin-bottom: 2px;
-    height: 40px;
-    
+    height: 4em;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    font-weight: bold;
+    letter-spacing: 0.150em;    
 }
 
 .form-control{
-    background-color: orange;
+    background-color: #FF8800;
     text-align: center;
 }
 
 ::placeholder{
     color: white;
+    font-weight: bold;
+    letter-spacing: 0.150em;
 }
 
 .btn{
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-    color: orange;
-    background-color: blue;
+    margin-top: 2em;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    width: 24em;
+    height: 4em;
+    border-radius: 10px;
+    color: #FF8800;
+    background-color: #072955;
+    font-weight: bold;
+    letter-spacing: 0.150em;
+    display: inline-block;
 }

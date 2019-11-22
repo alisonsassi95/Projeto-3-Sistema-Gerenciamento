@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="448" height="341" viewBox="0 0 448 341">
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-769 -136)">
+    <text id="ID" transform="translate(862 406)" fill="#f80" font-size="250" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">ID</tspan></text>
+    <rect id="Retângulo_8" data-name="Retângulo 8" width="448" height="143" rx="20" transform="translate(769 302)" fill="#072955"/>
+    <text id="PLATE" transform="translate(835 420)" fill="#f80" font-size="100" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600" letter-spacing="0.1em"><tspan x="0" y="0">PLATE</tspan></text>
+    <text id="SOFTWARE" transform="translate(877 333)" fill="#04509d" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="1em"><tspan x="0" y="0">SOFTWARE</tspan></text>
+    <text id="IDENTIFICADOR_DE_PLACAS" data-name="IDENTIFICADOR DE PLACAS" transform="translate(806 472)" fill="#04509d" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.25em"><tspan x="0" y="0">IDENTIFICADOR DE PLACAS</tspan></text>
+  </g>
+</svg>
