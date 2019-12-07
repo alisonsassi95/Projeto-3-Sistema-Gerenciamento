@@ -57,9 +57,10 @@
                             <option value="3">Alta</option>
                             @endif
                         </select>
+
                     </div>
+                    
                 </div>
-                <button class=" form-group btn btn-primary">Salvar</button>
             </form>
 
             @if (Session::has('message'))
@@ -67,7 +68,10 @@
             @endif
 
         </div>
+        <button class=" form-group btn btn-primary" style="text-align:right" >Salvar</button>
+
     </div>
+
 </div>
 
 @stop

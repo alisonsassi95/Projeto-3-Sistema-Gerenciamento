@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 
 use App\User;
-use App\People;
+use App\captureplate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; // para usar o SQL
 use Illuminate\Pagination\LengthAwarePaginator;
+
+
 
 class RelatoriosController extends Controller
 {
@@ -39,6 +41,8 @@ class RelatoriosController extends Controller
 SELECT 
 placa,
 datafoto,
+origemplaca,
+ID_Device,
 YEAR(datafoto)   AS ANO,
 MONTH(datafoto)  AS MES,
 DAY(datafoto)    AS DIA,
@@ -47,6 +51,80 @@ MINUTE(datafoto) AS MIN
 FROM captureplates');
         return view('/Relatorios/MovimentVeiculos', ['Retornopagina' => $Retornopagina]);
     }
+    public function RelMovVeicPais()
+    {      
+        $br= captureplate::where('origemplaca', 'BR')->count();
+        $ar= captureplate::where('origemplaca', 'ARGEN/VENEZ')->count();
+        $outros= captureplate::where('origemplaca', 'OUTROS')->count();
+    
+        return view('/Relatorios/MovimentVeiculosPais', ['br' => $br,'ar'=>$ar,'outros'=>$outros]);
+    }
+
+    public function RelTotalMensal()
+    {
+        $janeiro = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','01')
+        ->count();
+
+        $fevereiro = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','02')
+        ->count();
+  
+        $marco = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','03')
+        ->count();
+  
+        $abril = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','04')
+        ->count();
+  
+        $maio = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','05')
+        ->count();
+  
+        $junho = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','06')
+        ->count();
+  
+        $julho = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','07')
+        ->count();
+  
+        $agosto = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','08')
+        ->count();
+  
+        $setembro = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','09')
+        ->count();
+  
+        $outubro = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','10')
+        ->count();
+  
+        $novembro = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','11')
+        ->count();
+  
+        $dezembro = captureplate::whereYear('datafoto', date('Y'))
+        ->whereMonth('datafoto','12')
+        ->count();
+
+        return view('/Relatorios/TotalMensal', ['janeiro' => $janeiro,
+        'fevereiro' => $fevereiro,
+        'marco' => $marco,
+        'abril' => $abril,
+        'maio' => $maio,
+        'junho' => $junho,
+        'julho' => $julho,
+        'agosto' => $agosto,
+        'setembro' => $setembro,
+        'outubro' => $outubro,
+        'novembro' => $novembro,
+        'dezembro' => $dezembro,]);
+    }
+
+
 
 
     /*$sql = "SELECT 

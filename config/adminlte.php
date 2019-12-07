@@ -177,14 +177,14 @@ return [
                     'url'  => '/Relatorios/MovimentVeiculos',
                 ],
                 [
-                    'text' => 'Movimentação Veiculos BR',
+                    'text' => 'Movimentação Veiculos por país',
                     'icon' => ' fa-bullhorn',
-                    'url'  => '',
+                    'url'  => '/Relatorios/MovimentVeiculosPais',
                 ],
                 [
-                    'text' => 'Maior Dia Fluxo',
+                    'text' => 'Total Mensal',
                     'icon' => ' fa-bullhorn',
-                    'url'  => '',
+                    'url'  => '/Relatorios/TotalMensal',
                 ],
             ],        
         ],
