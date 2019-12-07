@@ -146,6 +146,7 @@ document.getElementById('mensagem').onclick = function msg(){
         $("#rg").mask("9999999999");
         $("#cep").mask("99.999-999");
         $("#performed_date").mask("9999-99-99 99:99:99");
+        $("#plate").mask("aaa9*99");
         
        //    EXEMPLOS
        //$("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy",completed:function(){alert("completed!");}});

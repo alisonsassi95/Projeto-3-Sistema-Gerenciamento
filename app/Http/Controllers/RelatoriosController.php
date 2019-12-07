@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; // para usar o SQL
 use Illuminate\Pagination\LengthAwarePaginator;
 
-class HomeController extends Controller
+class RelatoriosController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -26,51 +26,30 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+
+    public function RelAvisos()
     {
+        $Retornopagina = DB::select('
+        SELECT * FROM notices');
+        return view('/Relatorios/Avisos', ['Retornopagina' => $Retornopagina]);
+    }
+    public function RelMovVeic()
+    {
+        $Retornopagina = DB::select('
+SELECT 
+placa,
+datafoto,
+YEAR(datafoto)   AS ANO,
+MONTH(datafoto)  AS MES,
+DAY(datafoto)    AS DIA,
+HOUR(datafoto)   AS HORA,
+MINUTE(datafoto) AS MIN 
+FROM captureplates');
+        return view('/Relatorios/MovimentVeiculos', ['Retornopagina' => $Retornopagina]);
+    }
 
-       /* $RegisterPlatePeoples = DB::select('
-        SELECT Peoples.name	     AS Nome,  	
-		plates.Veic_model        AS Modelo,
-        plates.plate 	         AS Placa,
-        captureplate.datafoto    AS Data_Registro,
-        captureplate.origemplaca AS TIPO_PLACA
-        FROM plates
-        LEFT JOIN captureplate 	ON captureplate.placa = plates.plate
-        LEFT JOIN peoples 		ON peoples.id = plates.people_id'
-        );  */
-        $PlatePeoples = DB::select('
-        SELECT 
-        Peoples.id       	     AS id,
-        Peoples.name	         AS Nome,  	
-		plates.Veic_model        AS Modelo,
-        plates.plate 	         AS Placa
-        FROM plates
-        LEFT JOIN peoples 		ON peoples.id = plates.people_id
-        ');
-        $notices = DB::select('
-        SELECT * FROM notices
-        WHERE notices.date_end >= CURDATE()
-        AND notices.date_start <= CURDATE() 
-        ');
-        $PeoplesPlatePersonal = DB::select('
-        SELECT  placa       AS placa,
-		datasistema AS DataDia,
-        ID_Device   AS Device 
-        FROM captureplates
-        WHERE captureplates.placa in (        
-                                      SELECT plates.plate
-                                      FROM plates
-                                      LEFT JOIN peoples 		ON peoples.id = plates.people_id
-                                    WHERE peoples.id ='.$user = auth()->user()->id.")");
 
-        return view('home',[
-            'PlatePeoples' => $PlatePeoples,
-            'notices' => $notices,
-            'PeoplesPlatePersonal' => $PeoplesPlatePersonal,
-        ]);
-        
-        /*$sql = "SELECT 
+    /*$sql = "SELECT 
         exams.id,
         paciente.name        as paciente,
         medico.name          as medico,
@@ -114,5 +93,4 @@ class HomeController extends Controller
             'ExamesSolicitado' => $ExamesSolicitado,
 
         ]);*/
-    }
 }

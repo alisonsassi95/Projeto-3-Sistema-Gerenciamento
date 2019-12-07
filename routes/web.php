@@ -24,6 +24,11 @@ Route::get('/', function () {
     Route::view('/home', 'home')->name('home'); 
     Route::get('/home', ['uses'=>'HomeController@index', 'as' => 'home']);  
     
+    //Relatórios
+    Route::get('/Relatorios/Avisos', ['uses'=>'RelatoriosController@RelAvisos', 'as' => 'RelAvisos']);  
+    Route::get('/Relatorios/MovimentVeiculos', ['uses'=>'RelatoriosController@RelMovVeic', 'as' => 'RelMovVeic']);  
+
+
     //notice
     Route::get('/notice', ['uses'=>'NoticeController@index', 'as' => 'notice.index']);  
     Route::get('/notice/add', ['uses'=>'NoticeController@add', 'as' => 'notice.add']);

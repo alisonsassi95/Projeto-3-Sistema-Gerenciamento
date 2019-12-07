@@ -25,8 +25,8 @@
                         </div>
 
                         <div class="form-group col-md-4 {{$errors->has('plate') ? 'has-error' : '' }}">
-                            <label for="plate">Placa(Adicionar mascara)</label>
-                            <input type="text" name="plate" id = "plate" class="form-control" placeholder="Placa do Veícuo">
+                            <label for="plate">Placa</label>
+                            <input type="text" name="plate" id = "plate" class="form-control" placeholder="Placa do Veícuo" onkeydown="upperCaseF(this)">
                         @if($errors->has('plate'))
                         <span class="help-block">
                             <strong>{{$errors->first('plate')}}</strong>
@@ -36,7 +36,7 @@
                         
                         <div class="form-group col-md-4 {{$errors->has('Veic_color') ? 'has-error' : '' }}">
                             <label for="Veic_color">Cor do veículo</label>
-                            <input type="text" name="Veic_color" id = "Veic_color" class="form-control" placeholder="Modelo do Veícuo">
+                            <input type="text" name="Veic_color" id = "Veic_color" class="form-control" placeholder="Cor do Veícuo">
                         @if($errors->has('Veic_color'))
                         <span class="help-block">
                             <strong>{{$errors->first('Veic_color')}}</strong>
@@ -46,7 +46,7 @@
 
                         <div class="form-group col-md-4 {{$errors->has('Veic_model') ? 'has-error' : '' }}">
                             <label for="Veic_model">Modelo do veículo</label>
-                            <input type="text" name="Veic_model" id = "Veic_model" class="form-control" placeholder="Cor do Veícuo">
+                            <input type="text" name="Veic_model" id = "Veic_model" class="form-control" placeholder="Modelo do Veícuo">
                         @if($errors->has('Veic_model'))
                         <span class="help-block">
                             <strong>{{$errors->first('Veic_model')}}</strong>

@@ -73,6 +73,7 @@
 
 
 <!-- ------------- Tabela Placas de Pessoas ------------ -->
+<h1>Tabela Placas de Pessoas  </h1>
 <table id="tableDepartament" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
   <thead>
     <tr>
@@ -95,7 +96,8 @@
 </table>
 
 <!-- FIM de Tabela Placas de Pessoas -->
-<!-- ------------- Tabela Placas de Pessoas ------------ -->
+<!-- ------------- Tabela de Notícias ------------ -->
+<h1>Tabela de Notícias  </h1>
 <table id="tableDepartament" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
   <thead>
     <tr>
@@ -118,6 +120,34 @@
     @endforeach
 </table>
 
-<!-- FIM de Tabela Placas de Pessoas -->
+<!-- FIM de Tabela de Notícias -->
+
+<!-- ------------- Tabela de Placa POR PESSOA ------------ -->
+<h1>Tabela de Placa POR PESSOA (por onde passei?) </h1>
+<table id="tableDepartament" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+  <thead>
+    <tr>
+
+      <th>Placa</th>
+      <th>Data do Dia</th>
+      <th>Local</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    @foreach($PeoplesPlatePersonal as $PeoplesPlatePersonal)
+    <tr>
+      <td>{{ $PeoplesPlatePersonal->placa }}</td>
+      <td>{{ $PeoplesPlatePersonal->DataDia }}</td>
+      <td>{{ $PeoplesPlatePersonal->Device }}</td>
+
+    </tr>
+    @endforeach
+</table>
+
+<!-- FIM de Tabela de Notícias -->
+
+
 
 @stop

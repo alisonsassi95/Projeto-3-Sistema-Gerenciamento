@@ -47,6 +47,7 @@ class PlateController extends Controller
     public function save(Request $request)
     {
         $insert = plate::create($request->all());
+        
         return redirect()
             ->route('people.index')
             ->with('success', 'Cadastrada com Sucesso!');

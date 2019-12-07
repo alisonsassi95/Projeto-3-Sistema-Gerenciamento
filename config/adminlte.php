@@ -167,7 +167,22 @@ return [
             'can'  => 'adm',
             'submenu' => [
                 [
-                    'text' => 'Relatório de Avisos',
+                    'text' => 'Todos os Avisos',
+                    'icon' => ' fa-bullhorn',
+                    'url'  => '/Relatorios/Avisos',
+                ],
+                [
+                    'text' => 'Movimentação Veiculos Dia/Mês',
+                    'icon' => ' fa-bullhorn',
+                    'url'  => '/Relatorios/MovimentVeiculos',
+                ],
+                [
+                    'text' => 'Movimentação Veiculos BR',
+                    'icon' => ' fa-bullhorn',
+                    'url'  => '',
+                ],
+                [
+                    'text' => 'Maior Dia Fluxo',
                     'icon' => ' fa-bullhorn',
                     'url'  => '',
                 ],

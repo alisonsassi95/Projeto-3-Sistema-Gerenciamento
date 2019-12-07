@@ -52,7 +52,12 @@ class PeopleController extends Controller
 
     public function save(\App\Http\Requests\PeopleRequest $request)
     {
-        $insert = 0;
+       
+        $insert = People::create($request->all()); 
+        return redirect()
+            ->route('people.index')
+            ->with('success', 'Pessoa Cadastrada com Sucesso!');
+       /* $insert = 0;
        try{
             $insert = People::create($request->all());  
        }catch(Exception $e){
@@ -78,7 +83,7 @@ class PeopleController extends Controller
    return redirect()
                 ->route('people.add')
                 ->with('error', 'Dados cadastrais Incompletos!');
-    }
+    }*/
 }
 
     public function edit ($id)
