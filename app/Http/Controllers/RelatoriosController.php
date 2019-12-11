@@ -137,7 +137,7 @@ FROM captureplates');
         LEFT JOIN peoples ON peoples.id = plates.people_id
         LEFT JOIN captureplates ON captureplates.placa = plates.plate ');
 
-        return view('/Relatorios/QtdUsuariosPorPlaca', ['Retornopagina' => $Retornopagina]);
+        return view('/Relatorios/QtdUsuariosCadastrados', ['Retornopagina' => $Retornopagina]);
     }
 
     /*$sql = "SELECT 

@@ -26,7 +26,7 @@
     </tr>
   </thead>
   <tbody>
-
+    @foreach($Retornopagina as $Retornopagina)
     <tr>
       <td>{{ $Retornopagina->id }}</td>
       <td>{{ $Retornopagina->nome }}</td>
@@ -34,6 +34,8 @@
       <td>{{ $Retornopagina->carro }}</td>
       <td>{{ $Retornopagina->data_cadastro }}</td>
     </tr>
+    @endforeach
+    
 </table>
 
 

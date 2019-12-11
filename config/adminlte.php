@@ -187,7 +187,7 @@ return [
                     'url'  => '/Relatorios/TotalMensal',
                 ],
                 [
-                    'text' => 'Quantidade Clientes e Placa',
+                    'text' => 'Qtd Clientes Cadastrados',
                     'icon' => ' fa-bullhorn',
                     'url'  => '/Relatorios/QtdUsuariosCadastrados',
                 ],
