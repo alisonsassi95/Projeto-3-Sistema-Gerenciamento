@@ -54,7 +54,7 @@ class HomeController extends Controller
         AND notices.date_start <= CURDATE() 
         ');
         $PeoplesPlatePersonal = DB::select('
-        SELECT  placa       AS placa,
+        SELECT placa       AS placa,
 		datasistema AS DataDia,
         ID_Device   AS Device 
         FROM captureplates
@@ -62,7 +62,7 @@ class HomeController extends Controller
                                       SELECT plates.plate
                                       FROM plates
                                       LEFT JOIN peoples 		ON peoples.id = plates.people_id
-                                    WHERE peoples.id ='.$user = auth()->user()->id.")");
+                                    WHERE peoples.id ='.$user = auth()->user()->id.") ORDER BY DataDia LIMIT 4");
 
         return view('home',[
             'PlatePeoples' => $PlatePeoples,
