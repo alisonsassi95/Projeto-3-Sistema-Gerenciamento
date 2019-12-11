@@ -29,7 +29,8 @@ Route::get('/', function () {
     Route::get('/Relatorios/MovimentVeiculos', ['uses'=>'RelatoriosController@RelMovVeic', 'as' => 'RelMovVeic']);
     Route::get('/Relatorios/MovimentVeiculosPais', ['uses'=>'RelatoriosController@RelMovVeicPais', 'as' => 'RelMovVeicPais']);
     Route::get('/Relatorios/TotalMensal', ['uses'=>'RelatoriosController@RelTotalMensal', 'as' => 'RelTotalMensal']);  
-
+    Route::get('/Relatorios/QtdUsuariosCadastrados', ['uses'=>'RelatoriosController@RelTotalMensal', 'as' => 'QtdUsuariosCadastrados']);  
+    
 
     //notice
     Route::get('/notice', ['uses'=>'NoticeController@index', 'as' => 'notice.index']);  

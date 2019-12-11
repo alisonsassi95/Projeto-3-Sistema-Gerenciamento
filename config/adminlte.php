@@ -186,6 +186,12 @@ return [
                     'icon' => ' fa-bullhorn',
                     'url'  => '/Relatorios/TotalMensal',
                 ],
+                [
+                    'text' => 'Quantidade Clientes e Placa',
+                    'icon' => ' fa-bullhorn',
+                    'url'  => '/Relatorios/QtdUsuariosCadastrados',
+                ],
+
             ],        
         ],
     ],

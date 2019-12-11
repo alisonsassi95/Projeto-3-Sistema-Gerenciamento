@@ -125,7 +125,20 @@ FROM captureplates');
     }
 
 
+    public function QtdUsuariosCadastrados()
+    {
+        $Retornopagina = DB::select('
+        SELECT peoples.id as id, 
+        peoples.name as nome, 
+        plates.plate as placa, 
+        plates.Veic_model as carro, 
+        peoples.created_at as data_cadastro  
+        FROM plates
+        LEFT JOIN peoples ON peoples.id = plates.people_id
+        LEFT JOIN captureplates ON captureplates.placa = plates.plate ');
 
+        return view('/Relatorios/QtdUsuariosPorPlaca', ['Retornopagina' => $Retornopagina]);
+    }
 
     /*$sql = "SELECT 
         exams.id,
