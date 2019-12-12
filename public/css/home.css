@@ -149,7 +149,6 @@ body {
       height: 55px;
       background: #FF8800;
       position: relative;
-      
     }
 
     .passei-azul {
@@ -161,8 +160,8 @@ body {
       height: 230px;
       background: #072955;
       margin-top: -10px;
-      margin-left: 3%;
-    }
+      margin-left: 13px;
+        }
 
     .propaganda{
         font-family: 'Segoe UI Semibold' !important;
@@ -189,16 +188,15 @@ width:800px;
 height:300px;
 }
 
-    @media screen (min-width:958px){
-    .brazil{
-        margin-right:0;
-    margin-left:0;
-    width: 490px;
-    height: 240px;
-
-    }
-
+@media only screen and (max-width: 600px) {
+ 
     .passei{
         margin-top: 40px;
+    }
+
+    .passei-azul{
+      transform: translate(15%, 0);
+
 
     }
+  }

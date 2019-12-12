@@ -134,10 +134,11 @@
                         <table style="text-align:center;color:#fff; margin-top: 15px; font-size: 15px;">
                             <tbody>
                               @foreach($PeoplesPlatePersonal as $PeoplesPlatePersonal)
-                                <tr>
+                                <tr style="border:2px;transform: translate(15px, 10px);
+                                ">
 
-                                  <td>{{ $PeoplesPlatePersonal->placa }}</td>
-                                  <td>{{ $PeoplesPlatePersonal->DataDia }}</td>
+                                  <td>{{ $PeoplesPlatePersonal->placa }} - </td>
+                                  <td>{{ $PeoplesPlatePersonal->DataDia }} - </td>
                                   <td>{{ $PeoplesPlatePersonal->Device }}</td>
 
                                 </tr>
@@ -193,12 +194,12 @@
                         </div>
     
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
+<div style="transform: translate(-10px, 0px)">
                     <div class="passei-laranja">ESTACIONAMENTO</div>
                     <div class="passei-azul" style="font-size: 25px; margin-bottom:30px">
                         <div class="valor-est">
-                            <h2 style="margin-bottom: -20px "> CRÉDITO:</h1>
-                            <h1 style="margin-bottom: 20px ">R$ 122,60</h1>
+                            <h1 style="margin-bottom: -20px "> CRÉDITO:</h1>
+                            <h2 style="margin-bottom: 20px ">R$ 122,60</h2>
                             <h5 style="margin-bottom: -3px ">ÚLTIMA VEZ USADO</h5>
                             <p style="font-size: 15px;">09/10/2019 às 16:08 R$5,00
                             </p>
@@ -206,7 +207,7 @@
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo2" style="background:#FF8800;color:#072955; border: #FF8800;width:79px;height:25px; border-radius:5px;font-size:10px;">
                                 EXTRATO
                             </button>
-    
+                        </div>
                         </div>
                     </div>
                             <div class="modal fade" id="modalExemplo2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
@@ -231,8 +232,7 @@
                 <BR>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     
-    
-                  <div style=" transform: translate(30%, 0%);">
+                  <div style=" transform: translate(15%, 0%);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="225.216" height="169.852" viewBox="0 0 225.216 169.852">
                       <text id="ID" transform="translate(46.752 135)" fill="#f80" font-size="125"
                         font-family="SegoeUI-Bold, Segoe UI" font-weight="700">
