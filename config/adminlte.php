@@ -155,43 +155,47 @@ return [
             'url'  => '/people',
         ],
         [
-            'text' => 'Cadastro de Avisos',
+            'text' => 'Avisos',
             'icon' => 'bullhorn',
             'can'  => 'adm',
-            'url'  => '/notice',
+            'submenu' => [
+              [
+                'text' => 'Novo Aviso',
+                'icon' => ' fa-bullhorn',
+                'url'  => '/notice',
+              ],
+              [
+                'text' => 'Avisos Cadastrados',
+                'icon' => ' fa-bullhorn',
+                'url'  => '/Relatorios/Avisos',
+              ],
+            ],            
         ],
-
         [
-            'text'    => 'Relatórios',
-            'icon'    => '',
+            'text' => 'Relatorios',
+            'icon' => 'briefcase',
             'can'  => 'adm',
             'submenu' => [
                 [
-                    'text' => 'Todos os Avisos',
-                    'icon' => ' fa-bullhorn',
-                    'url'  => '/Relatorios/Avisos',
-                ],
-                [
-                    'text' => 'Movimentação Veiculos Dia/Mês',
-                    'icon' => ' fa-bullhorn',
+                    'text' => 'Detecção Dia/Mês',
+                    'icon' => 'analytics',
                     'url'  => '/Relatorios/MovimentVeiculos',
                 ],
                 [
-                    'text' => 'Movimentação Veiculos por país',
-                    'icon' => ' fa-bullhorn',
+                    'text' => 'Por País',
+                    'icon' => 'stats',
                     'url'  => '/Relatorios/MovimentVeiculosPais',
                 ],
                 [
-                    'text' => 'Total Mensal',
-                    'icon' => ' fa-bullhorn',
+                    'text' => 'Mensal',
+                    'icon' => 'stats',
                     'url'  => '/Relatorios/TotalMensal',
                 ],
                 [
-                    'text' => 'Qtd Clientes Cadastrados',
-                    'icon' => ' fa-bullhorn',
+                    'text' => 'Clientes Cadastrados',
+                    'icon' => 'stats',
                     'url'  => '/Relatorios/QtdUsuariosCadastrados',
                 ],
-
             ],        
         ],
     ],

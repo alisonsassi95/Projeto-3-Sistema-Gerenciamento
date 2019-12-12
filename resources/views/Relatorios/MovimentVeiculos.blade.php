@@ -2,9 +2,6 @@
 
 @section('title', 'AdminLTE')
 
-@section('content_header')
-<h1> Olá {{Auth::user()->name}}, seja bem vindo!</h1>
-@stop
 @section('content')
 
 <div class="row">
