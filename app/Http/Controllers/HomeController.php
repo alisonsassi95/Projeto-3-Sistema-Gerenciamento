@@ -55,27 +55,34 @@ class HomeController extends Controller
             from
             captureplates
             where 
-            datafoto BETWEEN date(date(now()) - 6) and date(now())
-            group by DAYOFWEEK(datafoto), dia
+            datafoto >= date(now()) - 7 and datafoto <= date(now()) + 1
+            and captureplates.placa in (        
+              SELECT plates.plate
+              FROM plates
+              LEFT JOIN peoples 		ON peoples.id = plates.people_id
+            WHERE peoples.id =".$user = auth()->user()->id.")
+            group by DAYOFWEEK(datafoto), dia      
         ");
 
         $PlatePeoples = DB::select('
         SELECT 
         Peoples.id       	     AS id,
         Peoples.name	         AS Nome,  	
-		plates.Veic_model        AS Modelo,
+		    plates.Veic_model        AS Modelo,
         plates.plate 	         AS Placa
         FROM plates
         LEFT JOIN peoples 		ON peoples.id = plates.people_id
         ');
+
         $notices = DB::select('
         SELECT * FROM notices
         WHERE notices.date_end >= CURDATE()
         AND notices.date_start <= CURDATE() 
         ');
+
         $PeoplesPlatePersonal = DB::select('
         SELECT placa       AS placa,
-		datasistema AS DataDia,
+		    datasistema AS DataDia,
         ID_Device   AS Device 
         FROM captureplates
         WHERE captureplates.placa in (        

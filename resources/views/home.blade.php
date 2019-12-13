@@ -117,9 +117,9 @@
                               @foreach($PeoplesPlatePersonal as $PeoplesPlatePersonal)
                                 <tr >
                                 
-                                  <td style="text-align:center;padding:0 15px"> {{ $PeoplesPlatePersonal->placa }}</td>
-                                  <td style="text-align:center;padding:0 15px"> {{ $PeoplesPlatePersonal->DataDia }}</td>
-                                  <td style="text-align:center;padding:0 15px"> {{ $PeoplesPlatePersonal->Device }}</td>
+                                  <td style="text-align:center;padding:0 15px; font-size:15px;"> {{ $PeoplesPlatePersonal->placa }}</td>
+                                  <td style="text-align:center;padding:0 15px; font-size:15px;"> {{ $PeoplesPlatePersonal->DataDia }}</td>
+                                  <td style="text-align:center;padding:0 15px; font-size:15px;"> {{ $PeoplesPlatePersonal->Device }}</td>
 
                                 </tr>
                                @endforeach
