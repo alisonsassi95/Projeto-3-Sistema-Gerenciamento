@@ -100,12 +100,15 @@
     
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
             <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+              <div style="transform: translate(-10px, 0px)">
                     <div class="passei-laranja">POR ONDE PASSEI</div>
                     <div class="passei-azul" style="font-size: 25px; margin-bottom:30px">
-                        <table style="text-align:center;color:#fff; margin-top: 15px; font-size: 15px;">
+                        <table style="text-align:center;color:#fff; margin-top: 15px; font-size: 18px;">
                             <tbody>
                               @foreach($PeoplesPlatePersonal as $PeoplesPlatePersonal)
-                                <tr style="border:2px;transform: translate(15px, 10px);
+                                <tr style="border:2px;transform: translate(50px, 10px);
                                 ">
 
                                   <td>{{ $PeoplesPlatePersonal->placa }} - </td>
@@ -117,52 +120,8 @@
                             </tbody>
                           </table>
                     </div>
-
-                        <div class="modal fade" id="modalExemplo1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header" style="background: #FF8800; color:#072955;">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <div style="text-align:center;font-size: 45px;" class="modal-title" id="exampleModalLabel1">POR ONDE PASSEI
-                                        </div>
-    
-                                    </div>
-                                    <div class="modal-body" style="background:#072955;color:#fff">
-                                        <table style="text-align:center">
-                                            <tbody>
-                                                <tr>
-                                                    <td>UNIJUI</td>
-                                                    <td>07/12</td>
-                                                    <td>15:06</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>UNIJUI</td>
-                                                    <td>07/12</td>
-                                                    <td>15:06</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>UNIJUI</td>
-                                                    <td>07/12</td>
-                                                    <td>15:06</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>UNIJUI</td>
-                                                    <td>07/12</td>
-                                                    <td>15:06</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>UNIJUI</td>
-                                                    <td>07/12</td>
-                                                    <td>15:06</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                </div> 
     
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <div style="transform: translate(-10px, 0px)">
@@ -203,7 +162,7 @@
                 <BR>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     
-                  <div style=" transform: translate(15%, 0%);">
+                  <div style=" transform: translate(25%, 0%);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="225.216" height="169.852" viewBox="0 0 225.216 169.852">
                       <text id="ID" transform="translate(46.752 135)" fill="#f80" font-size="125"
                         font-family="SegoeUI-Bold, Segoe UI" font-weight="700">

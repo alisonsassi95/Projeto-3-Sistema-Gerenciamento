@@ -1,202 +1,179 @@
 body {
-    background-image: url("../img/background.jpg");
+  background-image: url("../img/background.jpg");
 }
-  .aviso-laranja {
-    font-family: 'Segoe UI Semibold' !important;
-    font-size: 30px;
-    border-radius: 23px;
-    border: solid 3px #FF8800;
-    width: 460px;
-    height: 75px;
-    background: #FF8800;
-    color: #072955;
-    text-align: center;
-    font-size: 40px;
-    position: inherit;
-
-  }
-
-  .aviso-azul {
-    font-family: 'Segoe UI Semibold' !important;
-    border-radius: 23px;
-    border: solid 3px#072955;
-    width: 430px;
-    height: 700px;
-    background: #072955;
-    margin-top: -10px;
-    margin-left: 12px;
-
-  }
-
-  .aviso-red {
-    text-align: center;
-    margin: 10px;
-    font-family: 'Segoe UI Semibold' !important;
-    font-size: 16px;
-    color: white;
-    border-radius: 23px;
-    border: solid 3px #FF1200;
-    width: 370px;
-    height: 50px;
-    background: #FF1200;
-    margin-left: 30px;
-    margin-top:15px;
-  }
-
-  .aviso-orange {
-    text-align: center;
-    margin: 10px;
-    font-family: 'Segoe UI Semibold' !important;
-    font-size: 16px;
-    color: white;
-    border-radius: 23px;
-    border: solid 3px #FF8800;
-    width: 370px;
-    height: 50px;
-    background: #FF8800;
-    margin-left: 30px;
-    margin-top:15px;
-
-  }
-
-  .aviso-green {
-    text-align: center;
-    margin: 10px;
-    font-family: 'Segoe UI Semibold' !important;
-    font-size: 16px;
-    color: white;
-    border-radius: 23px;
-    border: solid 3px #116800;
-    width: 370px;
-    height: 50px;
-    background: #116800;
-    margin-left: 30px;
-    margin-top: 15px;
-  }
-
-  .box{
-    margin-left: 15%;
-    margin-top: 20px;
-    width: 630px;
-    height: 600px;
-  }
-
-  .box-title{
-      text-align: center;
-  }
-
-
-  #vertgraph {
-            width: 378px;
-            height: 207px;
-            position: relative;
-            background: url("g_backbar.gif") no-repeat;
-          }
-
-          #vertgraph ul {
-            width: 378px;
-            height: 207px;
-            margin: 0;
-            padding: 0;
-          }
-
-          #vertgraph ul li {
-            position: absolute;
-            width: 28px;
-            height: 160px;
-            bottom: 34px;
-            padding: 0 !important;
-            margin: 0 !important;
-            background: url("g_colorbar3.jpg") no-repeat !important;
-            text-align: center;
-            font-weight: bold;
-            color: white;
-            line-height: 2.5em;
-          }
-
-          #vertgraph li.critical {
-            left: 24px;
-            background-position: 0px bottom !important;
-          }
-
-          #vertgraph li.high {
-            left: 101px;
-            background-position: -28px bottom !important;
-          }
-
-          #vtgraph li.medium {
-            left: 176px;
-            background-position: -56px bottom !important;
-          }
-
-          #vertgraph li.low {
-            left: 251px;
-            background-position: -84px bottom !important;
-          }
-
-          #vertgraph li.info {
-            left: 327px;
-            background-position: -112px bottom !important;
-          }
-
-    .passei-laranja {
-      text-align: center;
-      font-family: 'Segoe UI Semibold' !important;
-      font-size: 28px;
-      border-radius: 23px;
-      border: solid 3px #FF8800;
-      width: 353px;
-      height: 55px;
-      background: #FF8800;
-      position: relative;
-    }
-
-    .passei-azul {
-      font-family: 'Segoe UI Semibold' !important;
-      font-size: 30px;
-      border-radius: 16px;
-      border: solid 3px#072955;
-      width: 328px;
-      height: 230px;
-      background: #072955;
-      margin-top: -10px;
-      margin-left: 13px;
-        }
-
-    .propaganda{
-        font-family: 'Segoe UI Semibold' !important;
-      font-size: 32px;
-      border-radius: 16px;
-      border: solid 3px#072955;
-      width: 353px;
-      height: 96px;
-      background: #072955;
-      color:#FF8800;
-      text-align: center;
-    }
-
-      .valor-est {
-      color: #fff;
-      text-align: center;
-    }
-
-    .brazil{
-
-margin-right:100px;
-margin-left:100px;
-width:800px;
-height:300px;
+.aviso-laranja {
+  font-family: "Segoe UI Semibold" !important;
+  font-size: 30px;
+  border-radius: 23px;
+  border: solid 3px #ff8800;
+  width: auto;
+  height: 75px;
+  background: #ff8800;
+  color: #072955;
+  text-align: center;
+  font-size: 40px;
+  position: inherit;
 }
 
-@media only screen and (max-width: 600px) {
- 
-    .passei{
-        margin-top: 40px;
-    }
+.aviso-azul {
+  font-family: "Segoe UI Semibold" !important;
+  border-radius: 23px;
+  border: solid 3px#072955;
+  width: auto;
+  height: 700px;
+  background: #072955;
+  margin-top: -10px;
+  margin-left: 12px;
+}
 
-    .passei-azul{
-      transform: translate(15%, 0);
+.aviso-red {
+  text-align: center;
+  margin: 10px;
+  font-family: "Segoe UI Semibold" !important;
+  font-size: 16px;
+  color: white;
+  border-radius: 23px;
+  border: solid 3px #ff1200;
+  width: auto;
+  height: 50px;
+  background: #ff1200;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.aviso-orange {
+  text-align: center;
+  margin: 10px;
+  font-family: "Segoe UI Semibold" !important;
+  font-size: 16px;
+  color: white;
+  border-radius: 23px;
+  border: solid 3px #ff8800;
+  width: auto;
+  height: 50px;
+  background: #ff8800;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.aviso-green {
+  text-align: center;
+  margin: 10px;
+  font-family: "Segoe UI Semibold" !important;
+  font-size: 16px;
+  color: white;
+  border-radius: 23px;
+  border: solid 3px #116800;
+  width: auto;
+  height: 50px;
+  background: #116800;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.box {
+ /* margin-left: 15%;*/
+  margin-top: 20px;
+  width: auto;
+  height: auto;
+}
+
+.box-title {
+  text-align: center;
+}
+
+#vertgraph {
+  width: 378px;
+  height: 207px;
+  position: relative;
+  background: url("g_backbar.gif") no-repeat;
+}
+
+#vertgraph ul {
+  width: 378px;
+  height: 207px;
+  margin: 0;
+  padding: 0;
+}
+
+#vertgraph ul li {
+  position: absolute;
+  width: 28px;
+  height: 160px;
+  bottom: 34px;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: url("g_colorbar3.jpg") no-repeat !important;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  line-height: 2.5em;
+}
+
+#vertgraph li.critical {
+  left: 24px;
+  background-position: 0px bottom !important;
+}
+
+#vertgraph li.high {
+  left: 101px;
+  background-position: -28px bottom !important;
+}
+
+#vtgraph li.medium {
+  left: 176px;
+  background-position: -56px bottom !important;
+}
+
+#vertgraph li.low {
+  left: 251px;
+  background-position: -84px bottom !important;
+}
+
+#vertgraph li.info {
+  left: 327px;
+  background-position: -112px bottom !important;
+}
+
+.passei-laranja {
+  text-align: center;
+  font-family: "Segoe UI Semibold" !important;
+  font-size: 28px;
+  border-radius: 23px;
+  border: solid 3px #ff8800;
+  width: auto;
+  height: 55px;
+  background: #ff8800;
+  position: relative;
+}
+
+.passei-azul {
+  font-family: "Segoe UI Semibold" !important;
+  font-size: 30px;
+  border-radius: 16px;
+  border: solid 3px#072955;
+  width: auto;
+  height: 230px;
+  background: #072955;
+  margin-top: -10px;
+}
+
+.propaganda {
+  font-family: "Segoe UI Semibold" !important;
+  font-size: 32px;
+  border-radius: 16px;
+  border: solid 3px#072955;
+  width: auto;
+  height: 96px;
+  background: #072955;
+  color: #ff8800;
+  text-align: center;
+}
+
+.valor-est {
+  color: #fff;
+  text-align: center;
+}
 
 
-    }
-  }
+
