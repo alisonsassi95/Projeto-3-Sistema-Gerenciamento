@@ -37,8 +37,8 @@
                 <tr>
                     <td>{{ $notice->title }}</td>
                     <td>{{ $notice->description }}</td>
-                    <td>{{ $notice->date_start }}</td>
-                    <td>{{ $notice->date_end }}</td>
+                    <td>{{ date('d/m/Y', strtotime($notice->date_start)) }}</td>
+                    <td>{{ date('d/m/Y', strtotime($notice->date_end ))}}</td>
                     <td>{{ $notice->status }}</td>
                     <td>
 

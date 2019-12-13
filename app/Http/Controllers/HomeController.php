@@ -79,10 +79,9 @@ class HomeController extends Controller
         WHERE notices.date_end >= CURDATE()
         AND notices.date_start <= CURDATE() 
         ');
-
         $PeoplesPlatePersonal = DB::select('
         SELECT placa       AS placa,
-		    datasistema AS DataDia,
+		    DATE_FORMAT(datasistema, "%d/%m/%Y %H:%m:%s") AS DataDia,
         ID_Device   AS Device 
         FROM captureplates
         WHERE captureplates.placa in (        

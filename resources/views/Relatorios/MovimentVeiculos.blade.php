@@ -28,7 +28,7 @@
     @foreach($Retornopagina as $Retornopagina)
     <tr>
       <td>{{ $Retornopagina->placa }}</td>
-      <td>{{ $Retornopagina->datafoto }}</td>
+      <td>{{ date('d/m/Y', strtotime( $Retornopagina->datafoto ))}}</td>
       <td>{{ $Retornopagina->ANO }}</td>
       <td>{{ $Retornopagina->MES }}</td>
       <td>{{ $Retornopagina->DIA }}</td>
