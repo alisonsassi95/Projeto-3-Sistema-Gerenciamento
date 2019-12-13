@@ -1,10 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
-
-@section('content_header')
-    <h1>Perfil</h1>
-@stop
+@section('title', 'IDPlate - Reconhecimento e Controle')
 
 @section('content')
 <div class="panel-body">

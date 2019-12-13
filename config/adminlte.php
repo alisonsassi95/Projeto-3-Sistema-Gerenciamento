@@ -133,9 +133,21 @@ return [
             'url'  => '/Profile',
         ],
         [
+            'text' => 'Meu perfil',
+            'icon' => 'smile-o',
+            'can'  => 'work',
+            'url'  => '/Profile',
+        ],
+        [
             'text' => 'Cadastro de Pessoas',
             'icon' => 'user-plus',
             'can'  => 'adm',
+            'url'  => '/people',
+        ],
+        [
+            'text' => 'Cadastro de Pessoas',
+            'icon' => 'user-plus',
+            'can'  => 'work',
             'url'  => '/people',
         ],
         [

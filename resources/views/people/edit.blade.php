@@ -1,6 +1,6 @@
 ﻿@extends('adminlte::page')
 
-@section('title', 'Editar Pessoas')
+@section('title', 'IDPlate - Reconhecimento e Controle')
 
 @section('content')
 
