@@ -18,7 +18,7 @@
 
 
 <div class="row">
-  <div class="col-xs-20 col-sm-20 col-md-20 col-lg-3">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
     <div class="aviso-laranja">AVISOS </div>
     <div class="aviso-azul">
       @foreach($notices as $notices)
@@ -37,9 +37,9 @@
   </div>
 
     
-  <div class="col-xs-15 col-sm-15 col-md-15 col-lg-6">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
     <div class="row">
-        <div class="col-xs-15 col-sm-15 col-md-15 col-lg-15">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         
               <div class="box">
                   <div class="box-hearder">
@@ -97,7 +97,6 @@
               </div>                
         </div>      
     </div>
-  </div>
     
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
             <div class="row">
