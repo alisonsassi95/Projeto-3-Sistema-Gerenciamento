@@ -8,17 +8,17 @@
     <div class="box-header with-border">
         <h3 class="box-title">Cadastro de Notificação</h3>
     </div>
-    <div role="form">
-        <div class="box-body">
+    <div class="box-body"></div>
+        <div role="form">        
             @include('sweet::alert')
             <form action="{{ route('notice.save') }}" method="post">
                 {{ csrf_field() }}
 
-                <div class="form-group col-md-8 ">
+                <div class="form-group col-md-12">
                     <label for="title">Título</label>
                     <input type="text" name="title" class="form-control" placeholder="Título do Aviso">
                 </div>
-        </div>
+        
 
         <div class="form-group col-md-12">
             <label for="description">Descrição</label>
@@ -32,7 +32,7 @@
             <label for="date_end">Data de término</label>
             <input type="date" name="date_end" class="form-control" placeholder="Data de termino">
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-8">
             <label for="status">Tipo</label>
             <div required name="status" class="auto-control" value="{{ old('status') }}" required autofocus>
                 <select class="form-control" id="status" name="status">
@@ -40,12 +40,14 @@
                     <option value="2">Média</option>
                     <option value="1">Baixa</option>
                 </select>
-            </div>
+            </div>           
         </div>
-
+        <div class="form-group">
+        <button class="btn btn-primary" style="margin-left: 15px;><i class="glyphicon glyphicon-plus"></i> Adicionar</button>
+        </div>
         <br>
-        <button class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Adicionar</button>
-    </div>
+        </div>
+</div>
 
     @if (Session::has('message'))
     <div class="alert alert-info">{{ Session::get('message') }}</div>

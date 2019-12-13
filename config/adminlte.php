@@ -15,9 +15,9 @@ return [
 
     'title' => 'ID Plate',
 
-    'title_prefix' => ' ',
+    'title_prefix' => '',
 
-    'title_postfix' => ' ',
+    'title_postfix' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,23 +108,7 @@ return [
     */
 
     'menu' => [
-        '',
-        //     <div class="painel-do-usuario">
-        //     <div class="pull-left image" >
-        //       <img src="/imagens/avatar/{{Auth::user()->avatar}}" class="img-circle" alt="Imagem do usuário" >
-        //     </div>
-        //     <div class="informacao-esquerda">
-        //     @if (Auth::guest())
-        //       <p>admin@admin.com</p>
-        //       <a href="#" style="color:#c18a8a;"><i class="fa fa-circle text-success"style="color:red;"></i>Desconectado</a>
-        //       @else
-
-        //       <p>{{$nomeReduzido= str_limit(Auth::user()->name, 20) }}</p>
-        //       <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        //       @endif
-        //     </div>
-        //   </div>
-        [
+       [
             'text' => 'Inicio',
             'icon' => 'home',
             'url'  => '/home',

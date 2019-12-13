@@ -4,12 +4,12 @@
 
 @section('content')
 
-<div class="box box-primary">
+<div class="panel panel-default">
  <div class="box-header with-border">
     <h3 class="box-title">Cadastro de Pessoas</h3>
  </div>
     <div role="form">
-        <div class="box-body">
+        <div class="panel-body">
             @include('sweet::alert')
                     <form action="{{ route('people.save') }}" method="post">
                     {{ csrf_field() }}
@@ -156,8 +156,9 @@
                         @endif
                         </div>
 
-                        <br>
-                        <button class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Adicionar</button>
+                        <div>
+                        <button class="btn btn-primary" style="margin-left: 15px;"><i class="glyphicon glyphicon-plus"></i> Adicionar</button>
+                        </div>
                         </div>
 
                         @if (Session::has('message'))

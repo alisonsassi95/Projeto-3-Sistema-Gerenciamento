@@ -9,16 +9,9 @@
  <div class="box-header with-border">
     <h3 class="box-title">Cadastro de Usuários</h3>
  </div>
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+    <div class="box-body">
+        <div class="col-md-12">
         @include('sweet::alert')
-            <div class="panel panel-default">
-
-            <ol class="breadcrumb panel-heading" >
-            <li><a style="font-size:110%" href="{{ URL::previous() }}"><b>Usuários</b></a></li>
-            <li class="active" style="font-size:110%">Adicionar</li>
-            </ol>
-
                     <form action="{{ route('User.save') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
 
@@ -77,9 +70,8 @@
                             </select>
                         </div>
 
-                        <button class=" form-group btn btn-info"><i class="glyphicon glyphicon-plus"></i > Adicionar</button>
+                        <button class=" form-group btn btn-primary"><i class="glyphicon glyphicon-plus"></i > Adicionar</button>
                     </form>
-                </div>
             </div>
         </div>
     </div>

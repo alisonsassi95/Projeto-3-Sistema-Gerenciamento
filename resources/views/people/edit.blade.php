@@ -4,12 +4,13 @@
 
 @section('content')
 
-<div class="box box-primary">
+<div class="panel panel-default">
     <div class="box-header with-border">
        <h3 class="box-title">Editar pessoas</h3>
     </div>
-    <div role="form">
-    <div class="box-body">
+    
+    <div class="panel-body">
+        <div role="form">
         @include('sweet::alert')
                     <form action="{{ route('people.update', $people->id) }}" method="post">
                     {{ csrf_field() }}
@@ -19,7 +20,7 @@
                     <div class="form-group col-md-2">
                         <label for="profile" >Perfil</label>
                         <div required name="profile" class="auto-control" required autofocus>
-                        <select class="form-control"  id = "profile" name="profile" onchange="habilitaBtn()">
+                        <select disabled="true" class="form-control"  id = "profile" name="profile" onchange="habilitaBtn()">
                             @if($people->profile == '1')
                                 <option value= "{{ $people->profile }}" >Administrador</option>
                                 <option value="1">Administrador</option>
@@ -165,11 +166,7 @@
                             <strong>{{$errors->first('obs')}}</strong>
                         </span>
                         @endif
-                        </div>
-
-
-
-                        
+                        </div>                    
                         
                         <button class=" form-group btn btn-primary" >Salvar</button>
                     </form>
