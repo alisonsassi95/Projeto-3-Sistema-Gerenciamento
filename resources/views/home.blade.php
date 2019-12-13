@@ -43,14 +43,14 @@
                         
               <div class="box">
                   <div class="box-hearder">
-                    <h3 class="box-title">Minhas Placas Cadastradas</h3>
+                    <h3 class="box-title">MINHAS PLACAS CADASTRADAS</h3>
                       <div class="box-body table-responsive">
                           <table id="tableDepartament" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                               <thead>
                                 <tr>
                             
-                                  <th>Modelo do Veiculo</th>
-                                  <th>Placa</th>
+                                  <th>MODELO DO VEICULO</th>
+                                  <th>PLACA</th>
                             
                                 </tr>
                               </thead>
@@ -65,7 +65,7 @@
                             </table>
                        </div>   
                     </div> 
-                    <h3>Vezes detectado na última semana</h3>
+                    <h3 style="text-align: center;">VEZES DETECTADO NA ÚLTIMA SEMANA</h3>
                     <canvas id="myChart"></canvas>
                         <script>
                             var ctx = document.getElementById('myChart').getContext('2d');
@@ -105,15 +105,21 @@
               <div style="transform: translate(-10px, 0px)">
                     <div class="passei-laranja">POR ONDE PASSEI</div>
                     <div class="passei-azul" style="font-size: 25px; margin-bottom:30px">
-                        <table style="text-align:center;color:#fff; margin-top: 15px; font-size: 18px;">
-                            <tbody>
-                              @foreach($PeoplesPlatePersonal as $PeoplesPlatePersonal)
-                                <tr style="border:2px;transform: translate(50px, 10px);
-                                ">
+                        <table style="text-align:center;color:#fff; margin-top: 15px; font-size: 18px; table-layout: fixed; text-align: center;text-align:left; margin-left:auto;  margin-right:auto;">
+                          <thead>
+                            <th style="text-align:center;padding:10px 15px; font-size:22px" >PLACA</th>
 
-                                  <td>{{ $PeoplesPlatePersonal->placa }} - </td>
-                                  <td>{{ $PeoplesPlatePersonal->DataDia }} - </td>
-                                  <td>{{ $PeoplesPlatePersonal->Device }}</td>
+                            <th style="text-align:center;padding:10px 15px; font-size:22px">DATA/HORA</th>
+
+                            <th style="text-align:center;padding:10px 15px;font-size:22px">LUGAR</th>
+                          </thead>
+                            <tbody >
+                              @foreach($PeoplesPlatePersonal as $PeoplesPlatePersonal)
+                                <tr >
+                                
+                                  <td style="text-align:center;padding:0 15px"> {{ $PeoplesPlatePersonal->placa }}</td>
+                                  <td style="text-align:center;padding:0 15px"> {{ $PeoplesPlatePersonal->DataDia }}</td>
+                                  <td style="text-align:center;padding:0 15px"> {{ $PeoplesPlatePersonal->Device }}</td>
 
                                 </tr>
                                @endforeach
@@ -151,8 +157,7 @@
     
                                         </div>
                                         <div class="modal-body" style="background:#072955;color:#fff">
-                                            O QUE VAI AQI
-                                        </div>
+AINDA NÃO ESTÁ DISPONÍVEL                                        </div>
                                     </div>
                                 </div>
                             </div>

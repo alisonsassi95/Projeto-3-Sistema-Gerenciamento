@@ -23,7 +23,6 @@ body {
   height: 700px;
   background: #072955;
   margin-top: -10px;
-  margin-left: 12px;
 }
 
 .aviso-red {
@@ -37,7 +36,6 @@ body {
   width: auto;
   height: 50px;
   background: #ff1200;
-  margin-left: 30px;
   margin-top: 15px;
 }
 
@@ -72,8 +70,8 @@ body {
 }
 
 .box {
- /* margin-left: 15%;*/
-  margin-top: 20px;
+ /* margin-left: 15%;
+  margin-top: 20px;*/
   width: auto;
   height: auto;
 }
