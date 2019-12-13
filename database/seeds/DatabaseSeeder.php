@@ -17,19 +17,19 @@ class DatabaseSeeder extends Seeder
             ['id' => 3, 'name' => 'Cliente', 'description' => 'Cliente.']
         ]);
         DB::table('peoples')->insert([
-            // ['id' => 1, 'name' => 'Administrador', 'birthdate' => '2999-01-01', 'genre' => 'M', 'cpf' => '12345677890','rg' => '1234567789', 'address' => 'Rua', 'number' => '12345',  'district' => 'Admin',  'complement' => 'Sem complemento', 'cep' => '987654321', 'state' => 'RS', 'city' => 'Ijuí', 'telephone' => '9978988765', 'email' => 'Admin@Admin.com', 'obs' => 'ele é o adin', 'profile' => '1'],
+            ['id' => 1, 'name' => 'Administrador', 'birthdate' => '2999-01-01', 'genre' => 'M', 'cpf' => '12345677890','rg' => '1234567789', 'address' => 'Rua', 'number' => '12345',  'district' => 'Admin',  'complement' => 'Sem complemento', 'cep' => '987654321', 'state' => 'RS', 'city' => 'Ijuí', 'telephone' => '9978988765', 'email' => 'Admin@Admin.com', 'obs' => 'ele é o adin', 'profile' => '1'],
             ['id' => 2, 'name' => 'Leticia', 'birthdate' => '2999-01-01', 'genre' => 'F', 'cpf' => '11111111111', 'rg' => '111111111', 'address' => 'Rua', 'number' => '12345',  'district' => 'User',  'complement' => 'Sem complemento', 'cep' => '987654321', 'state' => 'RS', 'city' => 'Ijuí', 'telephone' => '9978988765', 'email' => 'leticia@Admin.com', 'obs' => 'ele é o funcionrio', 'profile' => '2'],
             ['id' => 3, 'name' => 'Vanessa', 'birthdate' => '2999-01-01', 'genre' => 'F', 'cpf' => '22222222222', 'rg' => '1234567789', 'address' => 'Rua', 'number' => '12345',  'district' => 'User',  'complement' => 'Sem complemento', 'cep' => '987654321', 'state' => 'RS', 'city' => 'Ijuí', 'telephone' => '9978988765', 'email' => 'vanessa@Admin.com', 'obs' => 'ele é o usuario', 'profile' => '3'],
             ['id' => 4, 'name' => 'Joao', 'birthdate' => '2999-01-01', 'genre' => 'M', 'cpf' => '33333333333', 'rg' => '1234567789', 'address' => 'Rua', 'number' => '12345',  'district' => 'User',  'complement' => 'Sem complemento', 'cep' => '987654321', 'state' => 'RS', 'city' => 'Ijuí', 'telephone' => '9978988765', 'email' => 'joao@Admin.com', 'obs' => 'ele é o funcionario', 'profile' => '2'],
             ['id' => 5, 'name' => 'Pedro', 'birthdate' => '2999-01-01', 'genre' => 'M', 'cpf' => '44444444444', 'rg' => '1234567789', 'address' => 'Rua', 'number' => '12345',  'district' => 'User',  'complement' => 'Sem complemento', 'cep' => '987654321', 'state' => 'RS', 'city' => 'Ijuí', 'telephone' => '9978988765', 'email' => 'pedro@Admin.com', 'obs' => 'ele é o usuario', 'profile' => '3'],
         ]);
-        DB::table('users')->insert(
-            ['name' => 'admin', 'user' => 'admin', 'email' => 'admin@admin.com', 'password' => bcrypt('admin'), 'profile' => 'Administrador', 'people_id' => '1',],
-            ['name' => 'leticia', 'user' => 'leticia', 'email' => 'leticia@admin.com', 'password' => bcrypt('leticia'), 'profile' => 'Funcionário', 'people_id' => '2',],
-            ['name' => 'vanessa', 'user' => 'vanessa', 'email' => 'vanessa@admin.com', 'password' => bcrypt('vanessa'), 'profile' => 'Cliente', 'people_id' => '3',],
-            ['name' => 'joao', 'user' => 'joao', 'email' => 'joao@admin.com', 'password' => bcrypt('joao'), 'profile' => 'Funcionário', 'people_id' => '4',],
-            ['name' => 'pedro', 'user' => 'pedro', 'email' => 'pedro@admin.com', 'password' => bcrypt('pedro'), 'profile' => 'Cliente', 'people_id' => '5',],
-        );
+        DB::table('users')->insert([
+            ['id' => 1,'name' => 'admin', 'user' => 'admin', 'email' => 'admin@admin.com', 'password' => bcrypt('admin'), 'profile' => 'Administrador', 'people_id' => '1',],
+            ['id' => 2,'name' => 'leticia', 'user' => 'leticia', 'email' => 'leticia@admin.com', 'password' => bcrypt('leticia'), 'profile' => 'Funcionário', 'people_id' => '2',],
+            ['id' => 3,'name' => 'vanessa', 'user' => 'vanessa', 'email' => 'vanessa@admin.com', 'password' => bcrypt('vanessa'), 'profile' => 'Cliente', 'people_id' => '3',],
+            ['id' => 4,'name' => 'joao', 'user' => 'joao', 'email' => 'joao@admin.com', 'password' => bcrypt('joao'), 'profile' => 'Funcionário', 'people_id' => '4',],
+            ['id' => 5,'name' => 'pedro', 'user' => 'pedro', 'email' => 'pedro@admin.com', 'password' => bcrypt('pedro'), 'profile' => 'Cliente', 'people_id' => '5',],
+        ]);
 
 
         DB::insert(" INSERT INTO `notices` (`id`, `title`, `description`, `date_start`, `date_end`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
