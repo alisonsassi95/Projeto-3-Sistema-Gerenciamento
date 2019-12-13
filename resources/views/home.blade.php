@@ -65,59 +65,31 @@
                             </table>
                        </div>   
                     </div> 
-
-                    <div id="container" style="margin-top: 20%;">
+                    <h3>Vezes detectado na última semana</h3>
+                    <canvas id="myChart"></canvas>
                         <script>
-                            anychart.onDocumentReady(function() {
-                                // create column chart
-                                var chart = anychart.column();
-        
-                                // turn on chart animation
-                                chart.animation(true);
-        
-                                // set chart title text settings
-                                chart.title('Quantidade de Detecções por Dia');
-        
-                                // create area series with passed data
-                                var series = chart.column([
-                                    ['DOMINGO', '2'],
-                                    ['SEGUNDA', '1'],
-                                    ['TERÇA', '2'],
-                                    ['QUARTA', '3'],
-                                    ['QUINTA', '1'],
-                                    ['SEXTA', '2'],
-                                    ['SÁBADO', '8'],
-                                ]);
-        
-                                // set series tooltip settings
-                                series.tooltip().titleFormat('{%X}');
-        
-                                series.tooltip()
-                                    .position('center-top')
-                                    .anchor('center-bottom')
-                                    .offsetX(0)
-                                    .offsetY(5)
-                                    .format('{%Value}{groupsSeparator: }');
-        
-                                // set scale minimum
-                                chart.yScale().minimum(0);
-        
-                                // set yAxis labels formatter
-                                chart.yAxis().labels().format('{%Value}{groupsSeparator: }');
-        
-                                // tooltips position and interactivity settings
-                                chart.tooltip().positionMode('point');
-                                chart.interactivity().hoverMode('by-x');
-        
-                                // axes titles
-                                chart.xAxis().title('');
-                                chart.yAxis().title('');
-        
-                                // set container id for the chart
-                                chart.container('container');
-        
-                                // initiate chart drawing
-                                chart.draw();
+                            var ctx = document.getElementById('myChart').getContext('2d');
+                            var chart = new Chart(ctx, {
+                            // The type of chart we want to create
+                            type: 'bar',
+
+                            // The data for our dataset
+                            data: {
+                                labels: [
+                                  @foreach($daysOfWeek as $x)
+                                  '{{$x->dia}}',
+                                  @endforeach
+                                ],
+                                datasets: [{
+                                    label: 'Total',
+                                    backgroundColor: 'rgb(255,136,0)',
+                                    borderColor: 'rgb(255,136,0)',
+                                    data: [@foreach($daysOfWeek as $x) {{$x->total}}, @endforeach ]
+                                }]
+                            },
+
+                            // Configuration options go here
+                            options: {}
                             });
                         </script>
                       </div>

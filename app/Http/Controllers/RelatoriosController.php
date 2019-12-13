@@ -86,7 +86,7 @@ class RelatoriosController extends Controller
     public function QtdUsuariosCadastrados()
     {
         $Retornopagina = DB::select('
-        SELECT peoples.id as id, 
+        SELECT DISTINCT peoples.id as id, 
         peoples.name as nome, 
         plates.plate as placa, 
         plates.Veic_model as carro, 

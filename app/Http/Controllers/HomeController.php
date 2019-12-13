@@ -39,6 +39,26 @@ class HomeController extends Controller
         LEFT JOIN captureplate 	ON captureplate.placa = plates.plate
         LEFT JOIN peoples 		ON peoples.id = plates.people_id'
         );  */
+
+        $daysOfWeek = DB::select("
+        select 
+        case DAYOFWEEK(datafoto)
+        when 1 then 'Domingo'
+        when 2 then 'Segunda'
+        when 3 then 'Terça'
+        when 4 then 'Quarta'
+        when 5 then 'Quinta'
+        when 6 then 'Sexta'
+        when 7 then 'Sabado'
+        end as dia,
+            COUNT(DAYOFWEEK(datafoto)) as total
+            from
+            captureplates
+            where 
+            datafoto BETWEEN date(date(now()) - 6) and date(now())
+            group by DAYOFWEEK(datafoto), dia
+        ");
+
         $PlatePeoples = DB::select('
         SELECT 
         Peoples.id       	     AS id,
@@ -68,6 +88,7 @@ class HomeController extends Controller
             'PlatePeoples' => $PlatePeoples,
             'notices' => $notices,
             'PeoplesPlatePersonal' => $PeoplesPlatePersonal,
+            'daysOfWeek' => $daysOfWeek,
         ]);
         
         /*$sql = "SELECT 
